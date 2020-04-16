@@ -1,0 +1,12 @@
+#!/bin/bash -xue
+
+POKY_REPO=git://git.yoctoproject.org/poky
+POKY_RELEASE=rocko-18.0.4
+
+OE_REPO=git://git.openembedded.org/meta-openembedded
+OE_RELEASE=rocko
+
+git clone --branch ${POKY_RELEASE} ${POKY_REPO}
+cd poky
+git clone --branch ${OE_RELEASE} ${OE_REPO}
+cd -
